@@ -13,21 +13,21 @@ public class AddressBook {
 
 	public AddressBook() {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter First Name : ");
+		System.out.println("Enter Your First Name : ");
 		this.firstName = sc.next();
-		System.out.println("Enter last Name : ");
+		System.out.println("Enter Your Last Name : ");
 		this.lastName = sc.next();
-		System.out.println("Enter Address : ");
+		System.out.println("Enter Your Address : ");
 		this.address = sc.next();
 		System.out.println("Enter Your City Name : ");
 		this.city = sc.next();
-		System.out.println("Enter Your State : ");
+		System.out.println("Enter Your State Name : ");
 		this.state = sc.next();
-		System.out.println("Enter Zip : ");
+		System.out.println("Enter Your Zip Code : ");
 		this.zip = sc.next();
-		System.out.println("Enter Phone Number : ");
+		System.out.println("Enter Your Phone Number : ");
 		this.phoneNumber = sc.next();
-		System.out.println("Enter Email Id : ");
+		System.out.println("Enter Your Email Id : ");
 		this.email = sc.next();
 	}
 
