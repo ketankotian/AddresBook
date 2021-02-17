@@ -5,6 +5,7 @@ import java.util.Scanner;
 class Contact {
 
 	static ArrayList<AddressBook> info = new ArrayList<AddressBook>();
+	AddressBook a = new AddressBook();
 	Scanner sc = new Scanner(System.in);
 
 	public static ArrayList<AddressBook> getList() {
@@ -17,7 +18,6 @@ class Contact {
 	}
 
 	public void addContact() {
-		AddressBook a = new AddressBook();
 
 		System.out.println("Enter Your First Name : ");
 		a.setFirstName(sc.next());
@@ -39,22 +39,54 @@ class Contact {
 	}
 
 	public void editContact() {
-		AddressBook a = new AddressBook();
 		System.out.println("Enter name you want to edit");
+		
 		String name = sc.next();
 
 		for (int i = 0; i < info.size(); i++) {
 			if (info.get(i).getFirstName().equals(name)) {
-				addContact();
+				System.out.println("Enter Your First Name : ");
+				a.setFirstName(sc.next());
+				System.out.println("Enter Your Last Name : ");
+				a.setLastName(sc.next());
+				System.out.println("Enter Your Address : ");
+				a.setAddress(sc.next());
+				System.out.println("Enter Your City Name : ");
+				a.setCity((sc.next()));
+				System.out.println("Enter Your State Name : ");
+				a.setState(sc.next());
+				System.out.println("Enter Your Zip Code : ");
+				a.setZip(sc.next());
+				System.out.println("Enter Your Phone Number : ");
+				a.setPhoneNumber(sc.next());
+				System.out.println("Enter Your Email Id : ");
+				a.setEmail(sc.next());
 				info.add(i, a);
 				break;
-		}	else {
-					System.out.println("No Record found");
+			} else {
+				System.out.println("No Record found");
 			}
+		}
+
+	}
+
+	public void deleteContact() {
+		int j = 0, index = info.size() + 1;
+		System.out.println("Enter name you want to delete");
+		String name = sc.next();
+		for (int i = 0; i < info.size(); i++) {
+			if (info.get(i).getFirstName().endsWith(name)) {
+				index = j;
 			}
+			j++;
+			if (index < info.size())
+				info.remove(index);
+			else
+				System.out.println("no record found");
 
 		}
-	
+
+	}
 
 	public void display() {
 		for (AddressBook addr : info) {
@@ -172,7 +204,9 @@ public class AddressBook {
 
 		Contact c = new Contact();
 		c.addContact();
+		c.addContact();
 		c.editContact();
+		c.deleteContact();
 		c.display();
 
 	}
