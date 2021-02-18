@@ -49,7 +49,6 @@ class AddressBook {
 
 	public void view() {
 
-		System.out.println("FirstName    LastName     City     State   Contact      Zip");
 		for (int i = 0; i < persons.size(); i++) {
 			UserInfo p = (UserInfo) persons.get(i);
 			p.print();

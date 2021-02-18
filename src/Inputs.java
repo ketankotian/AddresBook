@@ -9,9 +9,9 @@ public class Inputs {
 		int input;
 		String s;
 		int ch;
+		boolean run= true;
 
-		while (true) {
-			System.out.println(" ");
+		while (run) {
 			System.out.println("******WELCOME TO ADDRESS BOOK******");
 			System.out.println("1. Add \n" + "2. Edit \n" + "3. Display \n" + "4. Delete \n" + "5. Exit");
 			System.out.println("Enter Your Choice:");
@@ -39,16 +39,15 @@ public class Inputs {
 			case 4:
 				System.out.println("Enter Name to Delete");
 				s = in.nextLine();
-				ab.view();
-				break;
-
-			case 5:
-				System.out.println("Enter Name to Delete");
 				s = in.nextLine();
 				ab.deletePerson();
 				break;
-			default:
-				System.exit(0);
+
+			case 5:
+				System.out.println("Thank you");
+				System.exit(5);
+				run=false;
+				break;
 			}
 		}
 	}

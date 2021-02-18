@@ -22,8 +22,8 @@ public class UserInfo {
 
 	public void print() {
 
-		System.out.println(firstName + " \t  " + lastName + " \t  " + address + " \t  " + state + " \t   " + phoneNumber
-				+ " \t " + zip + "\t" + email);
+		System.out.println("First Name : "+this.firstName + "   Last Name : " + this.lastName + "\nAddress :  " + this.address + "   State : " + this.state+"   Zip Code : "+this.zip + "\nPhone Number : "+  this.phoneNumber
+				 + "   Email Id : " + email);
 	}
 
 }
